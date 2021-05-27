@@ -2,6 +2,7 @@
 let api = require('/config/api.js')
 App({
   onLaunch() {
+    console.log("onLaunch")
     // 登录
     wx.login({
       success: res => {
