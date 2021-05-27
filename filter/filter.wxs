@@ -1,0 +1,16 @@
+var replaceStar = function (size) {
+  var showStr
+  if (size <= 1024) {
+    showStr = size + "B";
+  } else if (size <= 1024 * 1024 && size > 1024) {
+    showStr = Math.round(size / 10.24) / 100 + "KB";
+  } else if (size <= 1024 * 1024 * 1024 && size > 1024 * 1024) {
+    showStr = Math.round(size / 10.24 / 1024) / 100 + "MB";
+  } else {
+    showStr = Math.round(size / 10.24 / 1024 / 1024) / 100 + "GB";
+  }
+  return showStr;
+}
+module.exports = {
+  replaceStar: replaceStar
+}
